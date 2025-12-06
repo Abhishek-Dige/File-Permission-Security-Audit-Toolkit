@@ -40,3 +40,34 @@ do
                 echo "$file" >> "$output_file"
         fi
 done
+
+# Checking for WORLD WRITABLE FILE
+
+echo "" >> "$output_file"
+echo "2) Scripts writable by all" >> "$output_file"
+echo "------------------------------------------------------" >> "$output_file"
+
+find "$scan_directory" -type f -name "*.sh" -perm -o=w >> "$output_file"
+
+
+# Checking for risky patterns
+
+echo "" >> "$output_file"
+echo "3) Scripts containing risky Patterns" >> "$output_file"
+echo "------------------------------------------------------" >> "$output_file"
+
+pattern=("rm -rf" "sudo" "chmod 777")
+
+find "$scan_directory" -type f -name "*.sh" | while read file
+do
+        for pat in "${pattern[@]}"
+        do
+                if grep -q "$pat" "$file"
+                then
+                        echo "$file contains risky pattern : $pat" >> "$output_file"
+                fi
+        done
+done
+
+echo "" >> "$output_file"
+echo "Weak script scan completed!" >> "$output_file"
