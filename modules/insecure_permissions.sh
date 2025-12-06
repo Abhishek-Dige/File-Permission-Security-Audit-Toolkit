@@ -2,13 +2,13 @@
 
 
 
-OUTPUT="./output/insecure_permissions.txt"
-REPO="/Users/manasvisharma/File-Permission-Security-Audit-Toolkit"
+OUTPUT="../output/insecure_permissions.txt"
+REPO="../tests"
 
 
 
 # Start report
-echo "---Insecure Permission Report---" >> "$OUTPUT"
+echo "---Insecure Permission Report---" > "$OUTPUT"
 echo "Generated on: $(date)" >> "$OUTPUT"
 echo "" >> "$OUTPUT"
 

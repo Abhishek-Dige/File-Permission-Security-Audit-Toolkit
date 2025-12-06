@@ -1,0 +1,11 @@
+===== World Writable File Report =====
+Generated on: Sat Dec  6 18:32:16 UTC 2025
+
+--- World-Writable Files (others have write access) ---
+
+--------w- 1 abhi abhi 0 Dec  6 18:27 ../tests/c.txt
+-rw-rw-rw- 1 abhi abhi 0 Dec  6 18:27 ../tests/b.txt
+-rwxrwxrwx 1 abhi abhi 0 Dec  6 18:27 ../tests/a.txt
+-rwxrwxrwx 1 abhi abhi 0 Dec  6 18:12 ../tests/test1.sh
+
+Total files found: 4

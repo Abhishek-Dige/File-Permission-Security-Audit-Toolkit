@@ -2,22 +2,8 @@
 
 # Asking the user to enter absolute path of the direcory to be scanned
 
-while true
-do
-        echo "Please enter the absolute path of the directory to be scanned"
-        read scan_directory
-
-        if [ -d "$scan_directory" ]
-        then
-                break
-        else
-                echo "Invalid path ! please enter the path again"
-        fi
-done
-
-# Defining the output file
-
-output_file="weak_script_report.txt"
+scan_directory="../tests"
+output_file="../output/weak_script_report.txt"
 
 # Generating the head of the weak script report file
 
@@ -35,25 +21,17 @@ echo "------------------------------------------------------" >> "$output_file"
 find "$scan_directory" -type f -name "*.sh" | while read file
 do
         first_line=$(head -n 1 "$file")
-        if [[ "$first_line" != "#!"* ]]
+        if [[ "$first_line" != "#!/bin/bash" ]]
         then
                 echo "$file" >> "$output_file"
         fi
 done
 
-# Checking for WORLD WRITABLE FILE
-
-echo "" >> "$output_file"
-echo "2) Scripts writable by all" >> "$output_file"
-echo "------------------------------------------------------" >> "$output_file"
-
-find "$scan_directory" -type f -name "*.sh" -perm -o=w >> "$output_file"
-
 
 # Checking for risky patterns
 
 echo "" >> "$output_file"
-echo "3) Scripts containing risky Patterns" >> "$output_file"
+echo "2) Scripts containing risky Patterns" >> "$output_file"
 echo "------------------------------------------------------" >> "$output_file"
 
 pattern=("rm -rf" "sudo" "chmod 777")
