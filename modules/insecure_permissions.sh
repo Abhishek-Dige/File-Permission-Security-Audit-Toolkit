@@ -26,7 +26,7 @@ echo "" >> "$OUTPUT"
 
 # Detect directories with 777 permissions
 echo "---Directories with 777 permissions---:" >> "$OUTPUT"
-find "$REPO" -type d -perm 777 2>/dev/null >> "$OUTPUT"
+find "$REPO" -type d -perm 777 2>/dev/null  >> "$OUTPUT"
 echo "" >> "$OUTPUT"
 
 

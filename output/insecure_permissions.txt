@@ -1,7 +1,27 @@
+
 ---Insecure Permission Report---
-Generated on: Sat Dec  6 16:52:04 IST 2025
+Generated on: Sat Dec  6 17:13:19 IST 2025
 
 ---Files with 777 permissions---:
+/Users/manasvisharma/File-Permission-Security-Audit-Toolkit/tests/test_permission.txt
 
 ---Directories with 777 permissions---:
+
+---Insecure Permission Report---
+Generated on: Sat Dec  6 17:15:06 IST 2025
+
+---Files with 777 permissions---:
+/Users/manasvisharma/File-Permission-Security-Audit-Toolkit/tests/test_permission.txt
+
+---Directories with 777 permissions---:
+/Users/manasvisharma/File-Permission-Security-Audit-Toolkit/tests
+
+---Insecure Permission Report---
+Generated on: Sat Dec  6 17:18:19 IST 2025
+
+---Files with 777 permissions---:
+/Users/manasvisharma/File-Permission-Security-Audit-Toolkit/tests/test_permission.txt
+
+---Directories with 777 permissions---:
+/Users/manasvisharma/File-Permission-Security-Audit-Toolkit/tests
 
