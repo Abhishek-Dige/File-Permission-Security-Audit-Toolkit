@@ -71,20 +71,13 @@ Terminal-based automation
 
 │   └── test_script.sh
 
-│
 
-└── docs/
-    ├── architecture_diagram.png
-    ├── project_flow.txt    
-    ├── module_mapping.txt    
-    └── report_template.pdf
 
 ### MEMBER ROLES
 ## TEAM MEMBER TASK ASSIGNMENTS (7 MEMBERS)
 
 Member 1 — Insecure Permission Scanner
 -
-
 
 File: modules/insecure_permissions.sh
 Tasks:
