@@ -1,18 +1,11 @@
 Weak script report
-Generated on : Sat Dec  6 18:44:02 UTC 2025
+Generated on : Sun Dec  7 05:25:09 UTC 2025
 Directory scanned : ../tests
 ------------------------------------------------------
 
 1) Scripts missing SHEBANG LINE
 ------------------------------------------------------
-../tests/variable1.sh
-../tests/user1.sh
-../tests/infiniteloop1.sh
-../tests/forloop1.sh
 ../tests/header_missing.sh
-../tests/while1.sh
-../tests/connection1.sh
-../tests/string1.sh
 ../tests/test1.sh
 
 2) Scripts containing risky Patterns
