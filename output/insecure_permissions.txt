@@ -1,8 +1,10 @@
 ---Insecure Permission Report---
-Generated on: Sat Dec  6 18:12:47 UTC 2025
+Generated on: Mon Dec  8 05:05:58 UTC 2025
 
 ---Files with 777 permissions---:
+../tests/a.txt
 ../tests/test1.sh
 
 ---Directories with 777 permissions---:
+../tests/test_links
 
