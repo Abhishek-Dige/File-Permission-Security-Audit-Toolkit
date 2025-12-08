@@ -1,19 +1,15 @@
 #!/bin/bash
 
-# Asking the user to enter absolute path of the direcory to be scanned
-
 scan_directory="../tests"
 output_file="../output/weak_script_report.txt"
 
 # Generating the head of the weak script report file
-
 echo "Weak script report" > "$output_file"
 echo "Generated on : $(date)" >> "$output_file"
 echo "Directory scanned : $scan_directory" >> "$output_file"
 echo "------------------------------------------------------" >> "$output_file"
 
 # Checking for missing SHEBANG LINE
-
 echo "" >> "$output_file"
 echo "1) Scripts missing SHEBANG LINE" >> "$output_file"
 echo "------------------------------------------------------" >> "$output_file"
@@ -27,9 +23,7 @@ do
         fi
 done
 
-
 # Checking for risky patterns
-
 echo "" >> "$output_file"
 echo "2) Scripts containing risky Patterns" >> "$output_file"
 echo "------------------------------------------------------" >> "$output_file"
