@@ -32,6 +32,7 @@ help_menu() {
     echo "  recommendations    Show system recommendations"
     echo "  report             Show final Report"
     echo "  quit               Quit"
+	echo "  help|--help		   Show help menu"
     echo ""
 }
 
@@ -59,40 +60,36 @@ run_module() {
         exit 1
     fi
 }
-while true 
-do
-help_menu
-read -p "Enter you choice:" choice
-case $choice in
+case "$1" in
     insecure)
         ensure_directories
         run_module "insecure_permissions"
-	show_output "insecure_permissions"
+		show_output "insecure_permissions"
         ;;
     world-writable)
         ensure_directories
         run_module "world_writable"
-	show_output "world_writable"
+		show_output "world_writable"
         ;;
     weak-scripts)
         ensure_directories
         run_module "weak_script_detector"
-	show_output "weak_script_report"
+		show_output "weak_script_report"
         ;;
     broken-links)
         ensure_directories
         run_module "broken_links"
-	show_output "broken_links"
+		show_output "broken_links"
         ;;
     recommendations)
         ensure_directories
-	run_module "recommendations"
-	show_output "recommendations"
+		run_module "recommendations"
+		show_output "recommendations"
         ;;
     report)
         ensure_directories
         run_module "report_generator"
-	show_output "audit_report"
+		show_output "audit_report"
         ;;
     all)
         ensure_directories
@@ -102,18 +99,14 @@ case $choice in
         run_module "broken_links"
         run_module "recommendations"
         run_module "report_generator"
-	show_output "recommendations"
-	show_output "audit_report"
+		show_output "recommendations"
+		show_output "audit_report"
         ;;
-    quit|Quit)
-	echo "thank you for using our toolkit"
-	echo "exiting.."
-	exit 0
-	;;
+	help|--help)
+		help_menu
+		;;
     *)
         echo -e "${RED}Invalid option.${NC}"
-    	echo "exiting..."
-	exit 0
+    	echo -e "Try ./main.sh --help or ./main.sh help\n"
         ;;
 esac
-done
