@@ -237,9 +237,7 @@ The project owner will review and merge your changes.
 
 ---
 
-# 🎉 Done!
-You have safely contributed without needing collaborator access or risking the main project.  
-Follow these same 5 steps for every update.
+
 
     
 
